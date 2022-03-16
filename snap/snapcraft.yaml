@@ -1,0 +1,99 @@
+name: canutils
+version: '1.0.0'
+summary: canutils from https://github.com/linux-can/can-utils
+description: |
+  canutils from https://github.com/linux-can/can-utils built for snap targeting arm systems
+base: core20
+confinement: strict
+
+architectures:
+  - build-on: arm64
+    run-on: arm64
+
+apps:
+  asc2log:
+    command: bin/asc2log
+  bcmserver:
+    command: bin/bcmserver
+  can-calc-bit-timing:
+    command: bin/can-calc-bit-timing
+  canbusload:
+    command: bin/canbusload
+  candump:
+    command: bin/candump
+  cangen:
+    command: bin/cangen
+  cangw:
+    command: bin/cangw
+  canlogserver:
+    command: bin/canlogserver
+  canplayer:
+    command: bin/canplayer
+  cansend:
+    command: bin/cansend
+  cansequence:
+    command: bin/cansequence
+  cansniffer:
+    command: bin/cansniffer
+  isotpdump:
+    command: bin/isotpdump
+  isotpperf:
+    command: bin/isotpperf
+  isotprecv:
+    command: bin/isotprecv
+  isotpsend:
+    command: bin/isotpsend
+  isotpserver:
+    command: bin/isotpserver
+  isotpsniffer:
+    command: bin/isotpsniffer
+  isotptun:
+    command: bin/isotptun
+  ddd:
+    command: bin/ddd
+  ddd:
+    command: bin/ddd
+  ddd:
+    command: bin/ddd
+  j1939acd:
+      command: bin/j1939acd
+  j1939cat:
+      command: bin/j1939cat
+  j1939spy:
+      command: bin/j1939spy
+  j1939sr:
+      command: bin/j1939sr
+  log2asc:
+      command: bin/log2asc
+  log2long:
+      command: bin/log2long
+  mcp251xfd-dump:
+      command: bin/mcp251xfd-dump
+  slcan_attach:
+      command: bin/slcan_attach
+  slcand:
+      command: bin/slcand
+  slcanpty:
+      command: bin/slcanpty
+  testj1939:
+      command: bin/testj1939
+
+parts:
+  canutils:
+    plugin: make
+    source-type: git
+    source: https://github.com/linux-can/can-utils.git
+    organize:
+       /usr/local/bin: bin/
+    build-packages:
+      - gcc
+      - make
+      - libc6
+      - python3-distutils-extra
+      - libtool
+    override-build: |
+      ./autogen.sh
+      ./configure
+      make
+      make install
+
