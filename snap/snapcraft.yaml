@@ -90,3 +90,4 @@ parts:
       ./configure
       make
       make install
+
