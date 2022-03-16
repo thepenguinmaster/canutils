@@ -63,7 +63,7 @@ apps:
     command: bin/log2long
   mcp251xfd-dump:
     command: bin/mcp251xfd-dump
-  slcan_attach:
+  slcan-attach:
     command: bin/slcan_attach
   slcand:
     command: bin/slcand
