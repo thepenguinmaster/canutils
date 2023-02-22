@@ -21,6 +21,8 @@ apps:
     command: bin/canbusload
   candump:
     command: bin/candump
+    plugs:
+    - can-bus
   cangen:
     command: bin/cangen
   cangw:
