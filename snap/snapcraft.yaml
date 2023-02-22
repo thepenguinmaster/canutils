@@ -23,6 +23,8 @@ apps:
     command: bin/candump
     plugs:
     - can-bus
+    - network-bind
+    - network
   cangen:
     command: bin/cangen
   cangw:
