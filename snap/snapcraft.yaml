@@ -24,6 +24,7 @@ apps:
     plugs:
     - can-bus
     - network-bind
+    - network-control
     - network
   cangen:
     command: bin/cangen
