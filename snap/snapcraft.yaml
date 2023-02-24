@@ -13,66 +13,124 @@ architectures:
 apps:
   asc2log:
     command: bin/asc2log
+    plugs:
+    - can-bus
   bcmserver:
     command: bin/bcmserver
+    plugs:
+    - can-bus
   can-calc-bit-timing:
     command: bin/can-calc-bit-timing
+    plugs:
+    - can-bus
   canbusload:
     command: bin/canbusload
+    plugs:
+    - can-bus
   candump:
     command: bin/candump
     plugs:
     - can-bus
   cangen:
     command: bin/cangen
+    plugs:
+    - can-bus
   cangw:
     command: bin/cangw
+    plugs:
+    - can-bus
   canlogserver:
     command: bin/canlogserver
+    plugs:
+    - can-bus
   canplayer:
     command: bin/canplayer
+    plugs:
+    - can-bus
   cansend:
     command: bin/cansend
+    plugs:
+    - can-bus
   cansequence:
     command: bin/cansequence
+    plugs:
+    - can-bus
   cansniffer:
     command: bin/cansniffer
+    plugs:
+    - can-bus
   isotpdump:
     command: bin/isotpdump
+    plugs:
+    - can-bus
   isotpperf:
     command: bin/isotpperf
+    plugs:
+    - can-bus
   isotprecv:
     command: bin/isotprecv
+    plugs:
+    - can-bus
   isotpsend:
     command: bin/isotpsend
+    plugs:
+    - can-bus
   isotpserver:
     command: bin/isotpserver
+    plugs:
+    - can-bus
   isotpsniffer:
     command: bin/isotpsniffer
+    plugs:
+    - can-bus
   isotptun:
     command: bin/isotptun
+    plugs:
+    - can-bus
   j1939acd:
     command: bin/j1939acd
+    plugs:
+    - can-bus
   j1939cat:
     command: bin/j1939cat
+    plugs:
+    - can-bus
   j1939spy:
     command: bin/j1939spy
+    plugs:
+    - can-bus
   j1939sr:
     command: bin/j1939sr
+    plugs:
+    - can-bus
   log2asc:
     command: bin/log2asc
+    plugs:
+    - can-bus
   log2long:
     command: bin/log2long
+    plugs:
+    - can-bus
   mcp251xfd-dump:
     command: bin/mcp251xfd-dump
+    plugs:
+    - can-bus
   slcan-attach:
     command: bin/slcan_attach
+    plugs:
+    - can-bus
   slcand:
     command: bin/slcand
+    plugs:
+    - can-bus
   slcanpty:
     command: bin/slcanpty
+    plugs:
+    - can-bus
   testj1939:
     command: bin/testj1939
+    plugs:
+    - can-bus
 
 parts:
   canutils:
